@@ -1,0 +1,68 @@
+= link_to_function 'Text formatting', nil, :style => "display: inline", :class => "tiny_text" do |page| 
+  - page.visual_effect :toggle_blind, :htw, :duration => 0.15
+
+%div{:id => "htw", :style => "display: none"}
+  %table{:id => "howto", :border => "1"}
+    %thead
+      %tr
+        %td Write this
+        %td Get this
+
+    %tbody{:class => "tiny_text"}    
+      %tr
+        %td{ :width => "50%" }
+          _Apples and pears_
+        %td{ :width => "50%" }
+          %i Apples and pears
+      %tr
+        %td *Apples and pears*
+        %td
+          %b Apples and pears
+      %tr
+        %td _*Apples and pears*_
+        %td
+          %b
+            %i Apples and pears     
+      %tr
+        %td 
+          * Apples
+          %br
+          * Pears
+        %td
+          %ul
+            %li Apples
+            %li Pears
+      %tr
+        %td 
+          ="# Numbered list"
+          %br
+          ="# Numbered list"
+        %td
+          1. Numbered list
+          %br
+          2. Numbered list          
+      %tr        
+        %td
+          > Indented block
+        %td
+          %div{:class => "indent"} Indented block
+      %tr        
+        %td h1. Big title
+        %td
+          %h1 Big title
+      %tr        
+        %td h4. Small title
+        %td
+          %h4 Small title
+      %tr
+        %td "Eldoy":http://eldoy.com
+        %td= link_to "Eldoy", "http://eldoy.com"
+      %tr
+        %td
+          !http://programmathon.com/images/esl.png!
+        %td
+          =image_tag "esl.png", :size => "157x22"
+    %tfoot
+      %tr
+        %td{:colspan => "2"}
+          = link_to 'Advanced', 'http://hobix.com/textile', :target => "_blank", :class => "tiny_text"

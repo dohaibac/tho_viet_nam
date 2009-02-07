@@ -1,0 +1,23 @@
+!!!
+%html{ "xml:lang" => "en", :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %meta{ :content => "text/html;charset=UTF-8", "http-equiv" => "content-type" }
+    %title
+      Blog Tho Viet Nam
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag :all, :cache => true
+  %body
+    #blog_tho
+      #header
+        = render :partial => "statics/header"
+      #mainpage
+        #left_panel
+          = render :partial => "statics/left_panel"
+        #core
+          %p{ :style => "color: green" }
+            = flash[:notice]
+          = yield
+        #right_panel
+          = render :partial => "statics/right_panel"
+      #footer
+        = render :partial => "statics/footer"

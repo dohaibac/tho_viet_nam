@@ -1,0 +1,13 @@
+%p
+  %b
+    = h @post.title
+  %br
+  = h @post.user.login
+%p
+  = sanitize @post.markup_content
+%p
+  comments count : 
+  = h @post.comments_count
+= link_to 'Edit', edit_user_post_path(@post.user, @post)
+|
+= link_to 'Back', user_posts_path(@post.user)
