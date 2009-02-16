@@ -1,0 +1,14 @@
+<div class="comment_edit">
+<% form_remote_tag :url => { :action => :update, :controller => :comments, :id => @comment } do %>
+  <%#= render :partial => '/static/textilize_howto' %>
+	<textarea name="content" rows="10" cols ="40"><%= @comment.content %></textarea>
+  <p class="tiny_text">
+    <%= submit_tag "Update" %>
+    <%= link_to_function 'Cancel' do |page|
+			page[@comment].select(".comment_content").first.show
+      page[@comment].select(".comment_edit").first.remove
+      page[@comment].select(".user_action").first.show
+		end %>
+  </p>
+<% end %>
+</div>

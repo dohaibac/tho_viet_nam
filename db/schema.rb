@@ -9,11 +9,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090207093706) do
+ActiveRecord::Schema.define(:version => 20090216145552) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "posi_id"
+    t.integer  "post_id"
     t.text     "content"
     t.text     "markup_content"
     t.datetime "created_at"

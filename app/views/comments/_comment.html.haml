@@ -1,0 +1,10 @@
+- div_for comment, :class => cycle('odd', 'even') do 
+  %span.tiny_text.comment_description
+    = h comment.user.name
+    = time_ago_in_words comment.created_at
+    ago
+    %span.user_action
+      = link_to 'Edit', :url => { :action => :edit, :controller => :comments, :id => comment }, :method => :delete, :html => { :class => "red_link" }
+      = link_to 'Delete', :url => { :action => :destroy, :controller => :comments, :id => comment }, :method => :delete, :confirm => 'Are you sure?', :html => { :class => "red_link" }
+  .comment_content
+    = sanitize comment.markup_content

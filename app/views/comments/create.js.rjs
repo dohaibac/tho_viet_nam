@@ -1,0 +1,20 @@
+if @comment_saved
+	#page.replace_html 'comments_header',
+	#page.call :update_comments_header, true
+	#@current_user.create_event("created a comment in project #{@comment.task.project.title} in task #{@comment.task.title}", @comment.task.project, "comment")
+	page << "updateCommentsHeader(true)";
+  page.insert_html :top, :comments, :partial => @comment
+  page << "if($('comments').childElements().size() > 1) {"
+    page << "if($('comments').childElements()[1].hasClassName('odd')) {"
+    page[:comments].down.set_attribute('class', 'comment even')
+  page << "}}"
+  #page[@comment].visual_effect :highlight
+  #page[@comment].show
+  page[:comment_input].clear
+else
+  page[:comment_error].show
+  page.delay(5) {
+    page[:comment_error].visual_effect :fade
+  }
+  #page[:comment_content].visual_effect :shake
+end

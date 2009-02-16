@@ -1,28 +1,12 @@
 <h1>Editing comment</h1>
-
-<% form_for(@comment) do |f| %>
+<div id="div_column">
+<% form_for @comment, :url => project_task_comment_path(@comment.task.project, @comment.task, @comment) do |f| %>
   <%= f.error_messages %>
-
-  <p>
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
-  </p>
-  <p>
-    <%= f.label :posi_id %><br />
-    <%= f.text_field :posi_id %>
-  </p>
-  <p>
-    <%= f.label :content %><br />
-    <%= f.text_area :content %>
-  </p>
-  <p>
-    <%= f.label :markup_content %><br />
-    <%= f.text_area :markup_content %>
-  </p>
+  <%= f.text_area :content, :size => '40x10'%> 
   <p>
     <%= f.submit "Update" %>
   </p>
 <% end %>
-
-<%= link_to 'Show', @comment %> |
-<%= link_to 'Back', comments_path %>
+</div>
+<%= render :partial => '/static/textilize_howto' %> <br /> <br /> <br /> <br />
+<%= link_to 'Back', project_task_path(@comment.task.project, @comment.task) %>
