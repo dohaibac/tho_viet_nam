@@ -15,5 +15,24 @@
 	</div>
 </div>
 <div id="navigator">
-    Tin T&#7913;c | T&#225;c gi&#7843; | T&#7843;i V&#7873; | Quy &#272;&#7883;nh | <a href="#">Li&#234;n H&#7879;</a>
+<?
+    $menu  = "<ul>";
+    $menu .= "<li>";
+    $menu .= anchor("news/","Tin T&#7913;c");
+    $menu .= "</li>";
+    $menu .= "<li>";
+    $menu .= anchor("author/","T&#225;c gi&#7843;");
+    $menu .= "</li>";
+    $menu .= "<li>";
+    $menu .= anchor("download/","T&#7843;i V&#7873;");
+    $menu .= "</li>";
+    $menu .= "<li>";
+    $menu .= anchor("rule/","Quy &#272;&#7883;nh");
+    $menu .= "</li>";
+    $menu .= "<li>";
+    $menu .= anchor("contact/","Li&#234;n H&#7879;");
+    $menu .= "</li>";
+    $menu .= "</ul>";
+?>
+<?=$menu;?>
 </div>

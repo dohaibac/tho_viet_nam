@@ -35,9 +35,6 @@ h3 {
 	font-size: 1em;
 }
 
-ul {
-}
-
 a {
 	text-decoration: none;
 	color: #8C0209;
@@ -131,9 +128,23 @@ img.right {
 	background: #354A36;
 }
 
+#navigator ul{
+    float: right;
+    margin: 0px;
+    padding: 0px;
+}
+
+#navigator ul li{
+    float: left;
+    list-style-type: none;
+    margin: 0px;
+    padding: 4px 8px 0;
+    position: relative;
+}
+
 #navigator a {
 	font-weight: bold;
-    font-size: 14px;    
+    font-size: 14px;
     margin: 0 10px;
     color: #fff;
 }

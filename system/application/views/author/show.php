@@ -5,7 +5,7 @@
 		<div id="page-bg">
 		    <? $this->load->view('/layout/slidebar_left'); ?>
 			<div id="content">
-			
+			<?=$query['name']; ?>
 			</div>
 			<? $this->load->view('/layout/slidebar_right'); ?>
 			<div style="clear: both;">&nbsp;</div>

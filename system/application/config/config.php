@@ -11,7 +11,7 @@
 |	http://www.your-site.com/
 |
 */
-$config['base_url']	= "http://localhost/tho_viet_nam/";
+$config['base_url']	= "http://localhost/tvn/";
 
 /*
 |--------------------------------------------------------------------------
