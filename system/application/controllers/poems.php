@@ -1,10 +1,10 @@
 <?php
 
-class Author extends Controller {
+class Poems extends Controller {
 
     //public $my_data = array();
 
-	function Author(){
+	function Poems(){
     
 		parent::Controller();
         $this -> load -> model("author_model");
@@ -12,8 +12,7 @@ class Author extends Controller {
         //$this->load->library('MyMenu');
 	}
 	
-	function index(){
-        
+	function index(){        
         $data['query'] = $this -> author_model -> all();
         $data['title'] = "author";
 		$this->load->view('/author/all_author', $data);
@@ -37,7 +36,6 @@ class Author extends Controller {
         $data = $this -> author_model -> general();
         $this -> load -> view('author/new',$data);
     }
-
 }
 
 ?>

@@ -1,7 +1,7 @@
 <?
     class Author_model extends Model{
         
-        function Author(){
+        function Author_model(){
             parent::Model();
             $this -> load -> database();
         }
@@ -26,6 +26,11 @@
             $data['photo_file_name']  = 'photo_file_name';
 
             return $data;
+        }
+        
+        function author_poem($author_id){
+            $query = $this->db->get("authors");
+            return $query -> result();
         }
 
     }

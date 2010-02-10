@@ -575,3 +575,15 @@ img.right {
 .admin_action{
     margin-bottom: 20px;
 }
+
+.author_left{
+    float: left;
+    width: 200px;
+    text-align: center;
+}
+
+.author_right{
+    float: right;
+    width: 200px;
+    text-align: center;
+}
