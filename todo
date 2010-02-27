@@ -1,0 +1,40 @@
+
+Author : Bacdh
+Copyright : sqics.com
+
+----------------------------------
+
+Thovn.com, BLogtho.com todo list
+----------------------------------
+
+08/12/09
+- Fckeditor for edit and add new poems and author
+- everything can be edit able ? or contribute better version, report content problem ? 
+- comment for poems --> the first version, all loged user can comment for poems
+- create admin namespace 
+- user login, post comment, edit poem
+- admin layout
+- Webcrawl collect 1000 poems and 100 authors
+- ranking poems by views, average point, < marquee with top 10 poems by views and 10 poems by avg_point with poem have more than or equal 5 vote >
+- role user for admin edit or delete comment, edit poems, news, author.
+- make random poem in the banner, it can be click able to go to poems, it have author
+- search poems, author with title or content
+- design news display correct with image option, include show author
+- ranking author by total view of his/her poems
+- number user online ? total user visited ?
+
+
+----------------------------------
+--  version 2
+----------------------------------
+- ajax pagination in poems list --> http://railscasts.com/episodes/174-pagination-with-ajax
+- making search hint, do with ajax, search in poems title and author name
+- support OpenID to login with google or yahoo account ( example Noi.vn , it has google and yahoo account )
+
+
+----------------------------------
+
+- banner adverting ?
+- private user pay ? the poems of him cannot be modify by other user ? he have many option like background image ? link from the banner ?
+- make thovn with more than 1 language? support by rails i18n ? like Russian -> Puskin -> poem ?
+
