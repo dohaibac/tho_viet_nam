@@ -11,5 +11,10 @@
             return $query -> result();
         }
         
+        function get_poem($poem_id){
+            $query = $this-> db -> getwhere ("poems", array("id" => $poem_id));
+            return $query -> row_array();
+        }
+        
     }
 ?>

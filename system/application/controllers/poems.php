@@ -24,10 +24,13 @@ class Poems extends Controller {
             $id = 1;
         }
         
-        $data['title'] = "author";
-        $data['query'] = $this -> author_model -> get_author($id);
-        $data['poems'] = $this -> poem_model -> author_poems($id);
-        $this->load->view('/author/show', $data);
+        $data['title'] = "poem";
+        $data['poem'] = $this -> poem_model -> get_poem($id);
+        
+        #$data['author'] = $this -> author_model -> get_author($poem -> author_id);
+        #$data['poems'] = $this -> poem_model -> author_poems($poem -> author_id);
+        
+        $this->load->view('/poems/show', $data);
     }
     
     function input(){
